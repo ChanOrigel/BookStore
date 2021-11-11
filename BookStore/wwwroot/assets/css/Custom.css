@@ -1,0 +1,771 @@
+/* --------------------------- */
+/* REUSABLE CSS ALL PAGES STARTS */
+/* -------------------------- */
+
+.H-10 {
+    font-size: 0.625rem;
+}
+
+.H-12 {
+    font-size: 0.75rem;
+}
+
+.H-14, h6 {
+    font-size: 0.875rem;
+}
+
+.H-16 {
+    font-size: 1rem;
+}
+
+.H-18, h5 {
+    font-size: 1.125rem;
+}
+
+.H-20 {
+    font-size: 1.25rem;
+}
+
+.H-22 {
+    font-size: 1.375rem;
+}
+
+.H-24 {
+    font-size: 1.5rem;
+}
+
+.H-25, h4 {
+    font-size: 1.575rem;
+}
+
+.H-28 {
+    font-size: 1.75rem;
+}
+
+.H-30 {
+    font-size: 1.875rem;
+}
+
+.H-32 {
+    font-size: 2rem;
+}
+
+.H-35, h3 {
+    font-size: 2.188rem;
+}
+
+.H-38 {
+    font-size: 2.375rem;
+}
+
+.H-40 {
+    font-size: 2.5rem;
+    line-height: 40px;
+}
+
+.H-42 {
+    font-size: 2.625rem;
+    line-height: 40px;
+}
+
+.H-48 {
+    font-size: 3rem;
+    line-height: 50px;
+}
+
+.H-50 {
+    font-size: 3.125rem;
+}
+
+.fontW-200 {
+    font-weight: 200;
+}
+
+.fontW-300 {
+    font-weight: 300;
+}
+
+.fontW-400 {
+    font-weight: 400;
+}
+
+.fontW-500 {
+    font-weight: 500;
+}
+
+.fontW-600 {
+    font-weight: 600;
+}
+
+.fontW-700 {
+    font-weight: 700;
+}
+
+.TextWhite {
+    color: #fff;
+}
+
+.TextBlue {
+    color: #2657A8;
+}
+
+.TextOrange {
+    color: #E87200;
+}
+
+.TextRed {
+    color: #E00900;
+}
+
+.TextDarkGray {
+    color: #3F4142;
+}
+
+.TextLigthGray {
+    color: #76787C;
+}
+
+.LetterS-128 {
+    letter-spacing: 1.28px;
+}
+
+.BorderW {
+    border-bottom: 1px solid #F7F7F7;
+}
+
+.BordCard {
+    border: 1px solid #A2A2A2;
+    width: 100%;
+}
+
+.tab-content > .active {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+/* .sub{
+    float: left;
+} */
+/* .tab-pane > .card{
+   max-width: 700px;
+} */
+.LogoLogin {
+    background: #fff;
+    text-align: center;
+    vertical-align: middle;
+    width: 130px;
+    height: 130px;
+    top: 35%;
+    right: -65px;
+    border-radius: 50%;
+}
+
+.login-left {
+    background: url("../images/Accueil/Loris_Girl.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: right;
+}
+
+.SearchButton {
+    width: 40px;
+    height: 40px;
+    background: #003A80;
+    border: none;
+    outline: none;
+    border-radius: 0 6px 6px 0;
+    min-width: 10%;
+}
+
+    .SearchButton i {
+        color: #fff;
+    }
+
+.next > a, .previous > a {
+    padding: 0.5rem;
+}
+
+li.next:hover > a.page-link, li.previous:hover > a.page-link {
+    background: #E87200 !important;
+    color: #ffffff;
+}
+
+/* --------------------------- */
+/* REUSABLE CSS ALL PAGES ENDS */
+/* -------------------------- */
+
+/* ------------------------------- */
+/* INPUT, SELECT, TEXTAREA, CHECKBOXES, RADIO BUTTONS DESIGN STARTS*/
+/* ------------------------------- */
+
+.calicon {
+    position: relative;
+    width: 100%;
+}
+
+.fileLoad::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.fileLoad {
+    /*padding-top: 10px !important;*/
+    /* float: left;
+    text-align:left;*/
+}
+
+.calicon.FilePDF::before {
+    color: black;
+    content: "\f03e";
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin: auto;
+    position: absolute;
+    left: 25px;
+    top: 0px;
+}
+
+
+input[type=checkbox] {
+    appearance: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+    input[type=checkbox]::after {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        content: '';
+        text-align: center;
+        background: #fff;
+        display: block;
+        pointer-events: none;
+        opacity: 1;
+        color: #fff;
+        border: 2px solid #747474;
+        border-radius: 2px;
+    }
+
+    input[type=checkbox] + label {
+        line-height: 1.2rem;
+        margin: 0 10px 0 10px;
+    }
+
+    input[type=checkbox]:checked::after {
+        font-family: fontAwesome;
+        content: "\f00c\00a0";
+        background: #E87200;
+        border-radius: 2px;
+        border: 2px solid #E87200;
+    }
+
+    input[type=checkbox]:checked:hover::after {
+        opacity: 1;
+    }
+
+    input[type=checkbox],
+    input[type=checkbox]::after {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        line-height: 0.9rem;
+        padding-left: 1px;
+        vertical-align: middle;
+    }
+
+
+.form-control::-webkit-input-placeholder {
+    color: #858585;
+    font-size: 14px;
+}
+
+.form-control::-moz-placeholder {
+    color: #858585;
+    font-size: 14px;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #858585;
+    font-size: 14px;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #858585;
+    font-size: 14px;
+}
+
+.form-control::placeholder {
+    color: #858585;
+    font-size: 14px;
+}
+
+.card-label {
+    /* max-width: 364px; */
+}
+
+    .card-label > label, .control-label {
+        background-color: #fff;
+        color: #303138;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 6px auto auto 8px;
+        padding: 0 7px;
+    }
+
+    .card-label > input, .card-label > select {
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05);
+        display: block;
+        height: 50px;
+        margin-top: -13px;
+        padding: 5px 15px 0;
+        transition: border-color .3s;
+        width: 100%;
+        color: #3F4142;
+    }
+
+.TextArea-Input {
+    min-height: 130px;
+    vertical-align: baseline;
+}
+
+section {
+    margin-bottom: 171px;
+}
+/* .card-label > textarea {
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05);
+    display: block;
+    margin-top: -13px;
+    padding: 5px 15px 0;
+    transition: border-color .3s;
+    width: 100%;
+    color: #3F4142;
+} */
+
+.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05);
+    display: block;
+    height: 50px;
+    margin-top: -13px;
+    padding: 15px 15px 0;
+    transition: border-color .3s;
+    width: 100%;
+    color: #3F4142;
+}
+
+.bg-info, .badge-info {
+    background-color: #EFEFEF !important;
+}
+
+.bootstrap-tagsinput .tag {
+    color: #3F4142;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-radio {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* font-weight: 600; */
+    color: #272b41;
+    text-transform: capitalize;
+}
+
+    .form-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .form-radio .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        margin: 1px 0 0 0;
+        border: 2px solid #ddd;
+        border-top-color: rgb(221, 221, 221);
+        border-right-color: rgb(221, 221, 221);
+        border-bottom-color: rgb(221, 221, 221);
+        border-left-color: rgb(221, 221, 221);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .form-radio input:checked ~ .checkmark {
+        border-color: #2657A8;
+    }
+
+    .form-radio .checkmark::after {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        content: '';
+        width: 9px;
+        height: 9px;
+        background-color: #2657A8;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: scale(0.1);
+        -moz-transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        -o-transform: scale(0.1);
+        transform: scale(0.1);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .form-radio input:checked ~ .checkmark::after {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+.calicon.dateIcon:after {
+    color: #003A80;
+    content: "\f073";
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin: auto;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+}
+
+.calicon.uploadIcon:after {
+    color: #003A80;
+    content: "\f0ee";
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin: auto;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+
+.calicon.uploadIconTable:after {
+    color: #003A80;
+    content: "\f0ee";
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin: auto;
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    z-index: 0;
+}
+/* ------------------------------- */
+/* INPUT, SELECT, TEXTAREA, CHECKBOXES, RADIO BUTTONS DESIGN ENDS*/
+/* ------------------------------- */
+
+/* ------------------------------- */
+/* SELECT MULTIPLE OPTIONS DESIGN STARTS*/
+/* ------------------------------- */
+
+.select2-container {
+    width: auto;
+}
+
+.select2-container--bootstrap .select2-selection--multiple {
+    min-height: 50px;
+}
+
+    .select2-container--bootstrap .select2-selection--multiple .select2-selection__rendered {
+        padding: 10px;
+    }
+
+.select2-container--bootstrap .select2-results__option {
+    font-size: 0.875rem;
+}
+
+.select2-container--bootstrap .select2-results__option--highlighted[aria-selected] {
+    background-color: #2657A8;
+}
+
+/* ------------------------------- */
+/* SELECT MULTIPLE OPTIONS DESIGN  ENDS*/
+/* ------------------------------- */
+/* ------------------------------- */
+/* SELECT MULTIPLE DOCUMENTS IMAGES WITH DROPZONE DESIGN STARTS*/
+/* ------------------------------- */
+.dropzone-modern {
+    border: 2px dashed #e7e7e7;
+    background: transparent;
+    transition: ease opacity 300ms;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalDropzone {
+    max-height: 50px;
+    min-height: 50px;
+    height: 50px;
+    justify-content: flex-end;
+    border: 1px solid #dbdbdb;
+    margin-top: -10px;
+}
+/* ------------------------------- */
+/* SELECT MULTIPLE DOCUMENTS IMAGES WITH DROPZONE DESIGN ENDS*/
+/* ------------------------------- */
+
+/* ------------------------------- */
+/* PRODUCT PAGE DESIGN STARTS*/
+/* ------------------------------- */
+
+.Box-Card {
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    box-shadow: 3px 3px 12px #00000029 !important;
+    border-radius: 6px !important;
+    opacity: 1;
+    height: fit-content;
+    border: 1px solid #E2E2E2;
+}
+
+.Ul-Mail {
+    position: absolute;
+    top: 30px;
+    width: 190px;
+    z-index: 5;
+    /* overflow: hidden; */
+    display: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+span.error {
+    color: #C10000;
+    font-size: 0.75em;
+    margin-top: -5px;
+    padding: 0;
+    display: none;
+    position: absolute;
+    bottom: -20px;
+}
+
+label.error {
+    color: #C10000;
+}
+
+.Details-PaddX {
+    padding: 2% 10% !important;
+}
+
+.Details-PaddR {
+    padding: 1% 5% 2% 2% !important;
+}
+
+.AddLink:link, .AddLink:visited, .AddLink:hover {
+    color: #2657A8;
+    /* border-bottom: 1px solid #2657A8; */
+}
+
+.AddLink::after {
+    content: "+";
+    border: 1px solid #2657A8;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 6px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #2657A8;
+}
+
+.SignedDoc {
+    width: 100px;
+    float: right;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1 !important;
+}
+
+.ModalTittle {
+    text-align: center;
+    background-color: #fff;
+    padding-inline: 5px;
+}
+/* IMAGE SECTION */
+
+.HelpBox p {
+    word-wrap: break-word;
+}
+
+.FileLabel {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    z-index: 1;
+}
+
+@media (min-width:1920px) {
+    .Details-PaddX {
+        padding: 2% 15% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Ul-Mail {
+        position: absolute;
+    }
+}
+
+@media (max-width:571px) {
+    .SearchButton {
+        min-width: 25%;
+    }
+}
+
+.HomeImgText > li {
+    min-width: 180px;
+}
+
+.BoxExHome {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    border: 1px solid #EBEBEB;
+    border-radius: 1px;
+    text-align: center;
+    color: #76787C;
+    width: 200px;
+    height: 200px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .BoxExHome:hover, .BoxExHome.active {
+        background: #fff1eb 0% 0% no-repeat padding-box;
+        color: white;
+    }
+
+.BoxTextInactive {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    border: 1px solid #EBEBEB;
+    border-radius: 1px;
+    color: #ADADAD;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.BoxImageLoad {
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    opacity: 1;
+    width: 148px;
+    height: 148px;
+}
+
+.table.Non-Table thead {
+    background-color: #ffffff;
+    border-bottom: none;
+}
+
+    .table.Non-Table thead tr th {
+        font-weight: 600;
+        border: none;
+    }
+
+.table.Non-Table td {
+    border: none;
+}
+
+
+.GreenColor {
+    color: #588b8b;
+}
+.OrangeColor {
+    color: #c8553d;
+}
+
+.cover-img{
+    max-height:100px;
+}
+
+.img-thumbnail.details {
+    max-width: 200px;
+    max-height: 200px;
+}
+.trash{
+    width:25px;
+}
+
+.Go-up {
+    display: none;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    color: #83afaf;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+    .Go-up:hover {
+        color: #6aa0a0;
+    }
+
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}

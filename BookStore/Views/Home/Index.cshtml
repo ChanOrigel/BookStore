@@ -1,0 +1,100 @@
+﻿
+@using BookStore.ViewModels;
+@model IEnumerable<BookViewModel>
+
+@{
+    ViewData["Title"] = "Book list";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<!-- Page Header -->
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active"><a asp-action="Index">SBX Book library</a></li>
+                        @*<li class="breadcrumb-item active" aria-current="page">Checkout</li>*@
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title">Book List</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+<!-- /Page Header -->
+<div class="container py-5">
+    <div class="col-md-12">
+        <h5 class="GreenColor text-right">@ViewBag.Message</h5>
+        <div class="card card-table">
+            <div class="card-header ">
+                <h4 class="card-title">Library</h4>
+                <div class="float-right">
+                    <button type="button" class="btn border-primary" data-toggle="modal" data-target="#ModalBook">Add new book</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-center mb-0 Table-Lerna" id="Favorites-Table" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th>Cover</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var i in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        <a asp-action="Details" asp-route-id="@i.Id">
+                                            <img class="cover-img" src="@Url.Content("~/images/Covers/"+i.Cover)" alt="Cover of @i.Title" title="Cover of @i.Title" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Details" asp-route-id="@i.Id">@i.Title</a>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Details" asp-route-id="@i.Id">@i.Author</a>
+                                    </td>
+                                    <td class="text-right">
+                                        <form method="get" asp-action="Borrow_Return">
+                                            <input readonly type="hidden" name="isAvailable" value="@i.isAvailable.ToString()" />
+                                            <input type="hidden" name="Id" value="@i.Id" />
+                                            <button class="btn border-dark" type="submit">
+                                                @if (i.isAvailable)
+                                                {
+                                                    <span class="GreenColor">BORROW</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="OrangeColor">RETURN</span>
+                                                }
+
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+
+</script>

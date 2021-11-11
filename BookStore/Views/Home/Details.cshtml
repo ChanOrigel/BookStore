@@ -1,0 +1,92 @@
+﻿@using BookStore.ViewModels;
+@model BookViewModel
+
+@{
+    ViewData["Title"] = "Book details";
+}
+
+<!-- Page Header -->
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-action="Index">SBX Book library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a asp-action="Index">Book List</a></li>
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title">Book Details</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+
+<div class="container py-5">
+    <div class="col-md-12">
+        <h5 class="OrangeColor text-right">@ViewBag.Message</h5>
+
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title">Details</h4>
+            </div>
+            <div class="card-body ">
+                <div class="d-flex flex-column flex-sm-row  justify-content-start align-items-sm-center pb-4">
+                    <div class="d-flex align-items-center px-0 BoxExHome">
+                        <img class="img-thumbnail details" src="@Url.Content("~/images/Covers/"+Model.Cover)" alt="Cover of @Model.Title" title="Cover of @Model.Title">
+                    </div>
+                    <div class="px-3 col">
+                        <h4>@Model.Title</h4>
+                        <h5>@Model.Author</h5>
+                        <form method="post" asp-action="DeleteBook" class="d-flex align-items-center justify-content-between  py-4">
+                            <h5 class="mb-0 ">@Model.Description</h5>
+                            <input type="hidden" name="Id" value="@Model.Id" />
+                            <input readonly type="hidden" name="isAvailable" value="@Model.isAvailable.ToString()" />
+                            <button type="submit" class="btn danger"><img class="trash" src="~/images/Trash.svg" title="Delete" /></button>
+                        </form>
+                    </div>
+
+
+
+                </div>
+                <hr style="background:#999; width: 100%;" />
+
+
+                <div class="row">
+                    <div class="card-header col-md-12">
+                        <h4>History</h4>
+                    </div>
+                    <div class="card col-md-6">
+                        <div class="card-header">
+                            <h5>BORROW</h5>
+                        </div>
+                        <div class="card-body">
+                            @foreach (var i in Model.HistListB)
+                            {
+                                <h6 class="">@i.FormattedDate</h6>
+                            }
+                        </div>
+
+                    </div>
+
+                    <div class="card col-md-6">
+                        <div class="card-header">
+                            <h5>RETURN</h5>
+                        </div>
+                        <div class="card-body">
+                            @foreach (var i in Model.HistListR)
+                            {
+                                <h6 class="">@i.FormattedDate</h6>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
